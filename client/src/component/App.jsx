@@ -20,8 +20,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 // const profile = require('../../../profile.png');
-import profile from '../../../profile.png';
-import main_img from '../../../main.jpg';
+import profile from '../../../images/profile.png';
+import main_img from '../../../images/main.jpg';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 
@@ -332,16 +332,12 @@ const  App = (props) => {
           <Hidden xsDown>
             <div id='about' style={{display: 'flex', flexDirection: 'row'}}>
               <p style={{marginRight: 30, fontSize: 'medium', marginTop: 0}}>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-                facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-                gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-                donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-                Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-                imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-                arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-                donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit.
+                Hello and welcome to my website! <br /><br />
+                My name is Terrence, I am a software Engineer experienced with JavaScript, React, React Native, Node.JS, SQL/NoSQL and more. <br /><br />
+
+                Prior to software engineering, my background was in Mechanical and Materials Engineering. I've long been passionate about engineering because it combines critical thinking and problem solving in order to create exciting innovations. I fell in love with software engineering during my Master's program after writing a machine learning algorithm to reverse engineer the material properties of aluminum profiles. By incorporating computer programming to my research, I was able to produce results that were far more accurate than what I had expected. Software engineering really excites me because it encompasses the same critical thinking and analytical skills as traditional engineering while moving at a rapid rate. As a software engineer I hope to continue innovating, and be at the forefront of driving technological advances. <br /><br />
+
+
               </p>
               <img src={main_img} style={{width: 300, height: '100%'}}/>
             </div>
@@ -422,57 +418,8 @@ const  App = (props) => {
         <Divider />
         <Typography paragraph ref={resumeRef}>
           <h1>Resume</h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+            <h2>Education</h2>
+            <h2>Work Experiences</h2>
         </Typography>
         <Divider />
         <div ref={contactRef}>
