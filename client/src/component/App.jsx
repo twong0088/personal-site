@@ -19,11 +19,22 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 // const profile = require('../../../profile.png');
 import profile from '../../../images/profile.png';
 import main_img from '../../../images/main.jpg';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
+import FEC from '../../../images/FEC.png';
+import generic_store from '../../../images/react-redux-store.png';
+import SDC from '../../../images/SDC-close-up.JPG';
+import MVP from '../../../images/MVP.png';
+import stressStrain from '../../../images/stress-strain.JPG';
+import Modal from './modal.jsx';
 
 const drawerWidth = 240;
 
@@ -119,11 +130,18 @@ const useStyles = makeStyles((theme) => ({
   },
   socialMedia: {
     textAlign: 'center'
-  }
+  },
+  card: {
+    minWidth: 300,
+    maxWidth: 350,
+    margin: 20
+  },
+  media: {
+    height: 300,
+  },
 }));
 
 const  App = (props) => {
-  // const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
 
@@ -135,6 +153,7 @@ const  App = (props) => {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [visibleSection, setVisibleSection] = useState('about');
+  const [showModal, setShowModal] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -243,7 +262,8 @@ const  App = (props) => {
           aria-label="open drawer"
           edge="start"
           className={classes.closeButton}
-        >
+          onClick={()=>{window.location.href = 'mailto:terrencew07@ucla.edu'}}
+      >
           <EmailIcon />
       </IconButton>
       <IconButton
@@ -251,6 +271,7 @@ const  App = (props) => {
         aria-label="open drawer"
         edge="start"
         className={classes.closeButton}
+        onClick={()=>{window.open('https://linkedin.com/in/terrence-wong', '_blank')}}
       >
         <LinkedInIcon />
       </IconButton>
@@ -259,6 +280,7 @@ const  App = (props) => {
         aria-label="open drawer"
         edge="start"
         className={classes.closeButton}
+        onClick={()=>{window.open('https://github.com/twong0088', '_blank')}}
       >
         <GitHubIcon />
       </IconButton>
@@ -361,92 +383,159 @@ const  App = (props) => {
           </Hidden>
         </div>
         <Divider />
-        <Typography paragraph ref={projectsRef}>
+        <div  ref={projectsRef}>
           <h1>Projects</h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+          <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={FEC}
+                  title="Recreational Engineers Inc."
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Recreational Engineers Inc.
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    <strong>Technologies Used: </strong> <i>React, MySQL, Express, Node.JS, AWS S3/EC2</i><br/><br />
+                    A full stack retail web application that showcases a merchandise's images, reviews and related items.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={SDC}
+                  title="Scaling Simplified"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Scaling Simplified
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    <strong>Technologies Used: </strong> <i>PostgreSQL, Apache Cassandra, AWS EC2, NGINX</i><br/><br />
+                    Backend of an online shoe retailer capable of handling 10 million records and handling 800 RPS with average latency of 200 ms.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={MVP}
+                  title="Joey not Joey"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Joey not Joey
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                  <strong>Technologies Used: </strong> <i>React Native, Django, Django Channels, SQLite</i><br/><br />
+                  A full stack mobile quiz game that has a single player mode and a real time online multiplayer mode via WebSockets.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={generic_store}
+                  title="React-Redux Generic Store"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    React-Redux Online Store
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                  <strong>Technologies Used: </strong> <i>React, Redux, Firebase</i><br/><br />
+                  The front-end of a generic online retail web application. This application utilizes Firebase authentication, and Redux/React Hooks for state management.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={stressStrain}
+                  title="Regression Analysis"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Characterizing Ductile Materials using Regression Analysis
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                  <strong>Technologies Used: </strong> <i>Octave</i><br/><br />
+                  This is a console application that utilizes regression analysis to determine the material constants  of ductile materials.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
+        </div>
         <Divider />
-        <Typography paragraph ref={resumeRef}>
+        <div ref={resumeRef}>
           <h1>Resume</h1>
-            <h2>Education</h2>
-            <h2>Work Experiences</h2>
-        </Typography>
+          <span><strong>Frontend: </strong> JavaScript (ES6), React, Redux, React Native, Mocha/Chai, Jest, HTML, CSS, JQuery, Babel, Webpack</span><br />
+          <span><strong>Backend: </strong> Node.js, Express, Django, MySQL, PostgreSQL, SQLite, MongoDB, Cassandra, AWS (EC2, S3), NGINX</span><br />
+          <span><strong>Others: </strong> C++, Python, MATLAB, Octave, Git, LaTeX</span><br />
+          <h2>Work Experiences</h2>
+          <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
+          <ul>
+            <li>Designed and conducted fundamental research on advanced cementitious binders</li>
+            <li>Designed and conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements.</li>
+            <li>Helped publish innovation findings in technical conferences</li>
+          </ul>
+          <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - 2017</i></p>
+          <ul>
+            <li>Conducted testing for artificial lift pumps using metallographym cross-sectional analysis and microscopy.</li>
+            <li>Designed and executed mechanical tests on malfunctioned parts to determind mode of failure.</li>
+          </ul>
+          <h2>Education</h2>
+          <p><strong>Hack Reactor</strong> - Advanced Software Engineering Immersive Program</p>
+          <p><strong>San Jose State University</strong> - M.S. Mechanical Engineering | GPA: 3.5</p>
+          <p style={{marginLeft: 25}}><strong>Coursework: </strong>Autonomous and Connected Vehicles, Advanced Mechanical Engineering Analysis, Advanced Heat Transfer, Automatic Control Engineering</p>
+          <p style={{marginLeft: 25}}><strong>Projects: </strong>Modelling Plastic Behavior of Extruded Aluminum Profiles, Thermal Analysis of Heat Induced Stresses of Rapid Setting Cement during Hydration, Optimization of a Rover Wheel Fork using Finite Element Analysis
+          </p>
+          <p><strong>University of California, Los Angeles</strong> - B.S. Materials Science and Engineering | GPA: 3.2</p>
+          <p style={{marginLeft: 25}}><strong>Coursework: </strong>Introduction to Structured Programming in C++, Object-Oriented Programming Methods</p>
+          <p style={{marginLeft: 25}}><strong>Activities and Societies: </strong>Materials Research Society, Society for the Advancement of Material and Process Engineering (SAMPE)
+          </p>
+          <button onClick={()=>{window.open('https://drive.google.com/file/d/1chbif55hHzMeb7ggnhO0F-9j_4oRXa6k/view?usp=sharing', '_blank')}} >View Full Resume</button>
+        </div>
+        <br />
         <Divider />
         <div ref={contactRef}>
           <h1>Contact</h1>
           <div>
             <h3>Email</h3>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center'}}>
+            <div onClick={()=>{window.location.href = 'mailto:terrencew07@ucla.edu'}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
               <EmailIcon />
               <span style={{paddingLeft: 15}}>terrencew07@ucla.edu</span>
             </div>
             <h3>Social Media</h3>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center'}}>
+            <div onClick={()=>{window.open('https://linkedin.com/in/terrence-wong', '_blank')}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
               <LinkedInIcon />
               <span style={{paddingLeft: 15}}>https://linkedin.com/in/terrence-wong</span>
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center'}}>
+            <div onClick={()=>{window.open('https://github.com/twong0088', '_blank')}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
               <GitHubIcon />
               <span style={{paddingLeft: 15}}>https://github.com/twong0088</span>
             </div>
             <h3>Resume</h3>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center'}}>
+            <div onClick={()=>{window.open('https://drive.google.com/file/d/1chbif55hHzMeb7ggnhO0F-9j_4oRXa6k/view?usp=sharing', '_blank')}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
               <AccountBoxIcon />
               <span style={{paddingLeft: 15}}>My Resume</span>
             </div>
           </div>
         </div>
       </main>
+      {showModal ? <Modal close={setShowModal}/> : null}
     </div>
   );
 }
