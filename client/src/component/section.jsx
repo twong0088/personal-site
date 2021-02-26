@@ -73,6 +73,9 @@ function App() {
               onClick={() => {
                 scrollTo(leadershipRef.current);
               }}
+              onTouchStart={() => {
+                scrollTo(leadershipRef.current);
+              }}
             >
               Leadership
             </button>
@@ -82,6 +85,9 @@ function App() {
               onClick={() => {
                 scrollTo(providerRef.current);
               }}
+              onTouchStart={() => {
+                scrollTo(providerRef.current);
+              }}
             >
               Providers
             </button>
@@ -89,6 +95,9 @@ function App() {
               type="button"
               className={`header_link ${visibleSection === "Operations" ? "selected" : ""}`}
               onClick={() => {
+                scrollTo(operationsRef.current);
+              }}
+              onTouchStart={() => {
                 scrollTo(operationsRef.current);
               }}
             >
