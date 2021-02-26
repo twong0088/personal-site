@@ -158,7 +158,7 @@ const  App = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
+//c
   const sectionRefs = [
     { section: "about", ref: aboutRef },
     { section: "projects", ref: projectsRef },
