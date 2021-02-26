@@ -179,7 +179,9 @@ const  App = (props) => {
         }
       });
 
-      if (selected && selected.section !== visibleSection) {
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 2) {
+        setVisibleSection('contact');
+      } else if (selected && selected.section !== visibleSection) {
         setVisibleSection(selected.section);
       } else if (!selected && visibleSection) {
         setVisibleSection(undefined);
