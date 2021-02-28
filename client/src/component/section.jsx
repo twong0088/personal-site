@@ -15,7 +15,7 @@ const getDimensions = ele => {
 
 const scrollTo = ele => {
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    scrollIntoView(true)
+    ele.scrollIntoView(true)
   } else {
     ele.scrollIntoView({
       behavior: "smooth",
