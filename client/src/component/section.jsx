@@ -14,10 +14,14 @@ const getDimensions = ele => {
 };
 
 const scrollTo = ele => {
-  ele.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    ele.scrollIntoViewOptions()
+  } else {
+    ele.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 };
 
 function App() {

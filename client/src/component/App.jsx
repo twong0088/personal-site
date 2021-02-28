@@ -61,8 +61,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
-      marginLeft: 100,
-      marginRight: 100
+      marginLeft: 80,
+      marginRight: 80
     },
   },
   divider: {
