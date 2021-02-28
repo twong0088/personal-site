@@ -14,22 +14,22 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
-    "babel-preset-react": "^6.24.1",
-    "iskenny": "^1.1.2",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^7.0.1",
+    "iskenny": "^1.1.2",
     "mongoose": "^5.1.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

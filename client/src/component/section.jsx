@@ -1,5 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 const getDimensions = ele => {
   const { height } = ele.getBoundingClientRect();
@@ -14,13 +18,19 @@ const getDimensions = ele => {
 };
 
 const scrollTo = ele => {
+  console.log(ele.target.id);
+  document.getElementById().scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+  });
+
   // if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
   //   ele.scrollIntoView(true)
   // } else {
-    ele.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    // ele.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
   // }
 };
 
