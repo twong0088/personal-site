@@ -60,7 +60,10 @@ const scrollTo = ele => {
   //   block: "start",
   // });
   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    ele.scrollIntoView(true)
+    ele.scrollIntoViewOptions({
+      behavior: "smooth",
+      block: "start",
+    })
   } else {
     ele.scrollIntoView({
       behavior: "smooth",
