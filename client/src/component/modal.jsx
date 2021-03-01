@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import FEC from '../../../images/FEC.png';
+import SDC from '../../../images/SDC.gif';
 import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -18,10 +18,10 @@ const Modal = ({ proj, close }) => {
       description = `This is a demo of a full stack single page online retail web application I built using React, Express, NodeJS and MySQL. \nI developed an image display module that dynamically renders an image preview bar and color swatch panel based on information from the database. Pressing the buttons on the color swatch panel would change the set of images in the preview bar and clicking the images in the image preview bar would change the main image. \nWhen the cursor hovers over the main image, a module pops up displaying a zoomed in version of the main image to let users examines the merchandise in detail.`;
       break;
     case 'SDC':
-        url = 'https://youtu.be/dQw4w9WgXcQ';
-        img = '';
+        url = '';
+        img = SDC;
         title = 'Scaling Simplified';
-        description = 'Hi Kevin';
+        description = `lol Hi Kevin!`;
         break;
     case 'MVP':
       url = 'https://youtu.be/1RhqFDyf3DU';
@@ -39,7 +39,7 @@ const Modal = ({ proj, close }) => {
       url = '';
       img = '';
       title = 'Characterizing Ductile Materials using Regression Analysis';
-      description = '';
+      description = `This program was developed as part of my master's project at SJSU. The objective of my project is to examine how aluminum profiles (Al 6061-T6) deformed upon impact to study how the material can be incorporated to automotive use to make vehicles more energy efficient and safe. \nIn order to create a simulation model, I needed to determine a mathematical way to depict how aluminum deforms when impacted on. Given empirical test data, I developed a program that utilized a machine learning concept known as regression analysis to reverse engineer the material constants via the gradient descent method. This program calculates the parameters that best fit the data and returns a graph depicting empirical and best fit data. This program can be used to reverse engineer the material constants of any ductile material.`
       break;
   }
 

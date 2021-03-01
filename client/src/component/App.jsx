@@ -403,14 +403,14 @@ const  App = (props) => {
           <h1>Projects</h1>
           <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea >
+              <CardActionArea id='FEC'>
                 <CardMedia
                   className={classes.media}
                   image={FEC}
                   title="Recreational Engineers Inc."
                   id='FEC'
                 />
-                <CardContent>
+                <CardContent id='FEC'>
                   <Typography gutterBottom variant="h5" component="h2" id='FEC'>
                     Recreational Engineers Inc.
                   </Typography>
@@ -422,14 +422,14 @@ const  App = (props) => {
               </CardActionArea>
             </Card>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea>
+              <CardActionArea id='SDC'>
                 <CardMedia
                   className={classes.media}
                   image={SDC}
                   title="Scaling Simplified"
                   id='SDC'
                 />
-                <CardContent>
+                <CardContent id='SDC'>
                   <Typography gutterBottom variant="h5" component="h2" id='SDC'>
                     Scaling Simplified
                   </Typography>
@@ -441,14 +441,14 @@ const  App = (props) => {
               </CardActionArea>
             </Card>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea>
+              <CardActionArea id='MVP'>
                 <CardMedia
                   className={classes.media}
                   image={MVP}
                   title="Joey not Joey"
                   id='MVP'
                 />
-                <CardContent>
+                <CardContent id='MVP'>
                   <Typography gutterBottom variant="h5" component="h2" id='MVP'>
                     Joey not Joey
                   </Typography>
@@ -460,14 +460,14 @@ const  App = (props) => {
               </CardActionArea>
             </Card>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea>
+              <CardActionArea id='RRStore'>
                 <CardMedia
                   className={classes.media}
                   image={generic_store}
                   title="React-Redux Generic Store"
                   id='RRStore'
                 />
-                <CardContent>
+                <CardContent id='RRStore'>
                   <Typography gutterBottom variant="h5" component="h2" id='RRStore'>
                     React-Redux Online Store
                   </Typography>
@@ -479,14 +479,14 @@ const  App = (props) => {
               </CardActionArea>
             </Card>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea>
+              <CardActionArea id='SJSU-RA'>
                 <CardMedia
                   className={classes.media}
                   image={stressStrain}
                   title="Regression Analysis"
                   id='SJSU-RA'
                 />
-                <CardContent>
+                <CardContent id='SJSU-RA'>
                   <Typography gutterBottom variant="h5" component="h2" id='SJSU-RA'>
                     Characterizing Ductile Materials using Regression Analysis
                   </Typography>
