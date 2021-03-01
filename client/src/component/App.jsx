@@ -35,6 +35,10 @@ import SDC from '../../../images/SDC-close-up.JPG';
 import MVP from '../../../images/MVP.png';
 import stressStrain from '../../../images/stress-strain.JPG';
 import Modal from './modal.jsx';
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 const drawerWidth = 240;
 
@@ -51,10 +55,18 @@ const getDimensions = ele => {
 };
 
 const scrollTo = ele => {
-  ele.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  // ele.scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "start",
+  // });
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    ele.scrollIntoView(true)
+  } else {
+    ele.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 };
 
 const useStyles = makeStyles((theme) => ({
