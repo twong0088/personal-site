@@ -27,6 +27,7 @@
     "mongoose": "^5.1.2",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-player": "^2.9.0",
     "smoothscroll-polyfill": "^0.4.4",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"

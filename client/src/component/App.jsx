@@ -36,8 +36,6 @@ import MVP from '../../../images/MVP.png';
 import stressStrain from '../../../images/stress-strain.JPG';
 import Modal from './modal.jsx';
 import smoothscroll from 'smoothscroll-polyfill';
-
-// kick off the polyfill!
 smoothscroll.polyfill();
 
 const drawerWidth = 240;
@@ -55,10 +53,6 @@ const getDimensions = ele => {
 };
 
 const scrollTo = ele => {
-  // ele.scrollIntoView({
-  //   behavior: "smooth",
-  //   block: "start",
-  // });
   ele.scrollIntoView({
     behavior: "smooth",
     block: "start",
@@ -162,6 +156,7 @@ const  App = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [visibleSection, setVisibleSection] = useState('about');
   const [showModal, setShowModal] = useState(false);
+  const [projDetails, setDetails] = useState('FEC');
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -202,6 +197,17 @@ const  App = (props) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [visibleSection]);
+
+  const openProject = e => {
+    setDetails(e.target.id);
+    setShowModal(true);
+  };
+
+  const clickOutModal = e => {
+    if (showModal) {
+      setShowModal(false);
+    }
+  };
 
   const drawer = (
     <div>
@@ -301,7 +307,7 @@ const  App = (props) => {
   const container = props.window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={clickOutModal} style={showModal ? {overflow: 'hidden'} : null}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -396,91 +402,96 @@ const  App = (props) => {
         <div  ref={projectsRef}>
           <h1>Projects</h1>
           <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
-            <Card className={classes.card}>
-              <CardActionArea>
+            <Card className={classes.card} onClick={openProject}>
+              <CardActionArea >
                 <CardMedia
                   className={classes.media}
                   image={FEC}
                   title="Recreational Engineers Inc."
+                  id='FEC'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" id='FEC'>
                     Recreational Engineers Inc.
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    <strong>Technologies Used: </strong> <i>React, MySQL, Express, Node.JS, AWS S3/EC2</i><br/><br />
+                  <Typography variant="body2" color="textSecondary" component="p" id='FEC'>
+                    <strong id='FEC'>Technologies Used: </strong> <i id='FEC'>React, MySQL, Express, Node.JS, AWS S3/EC2</i><br /><br />
                     A full stack retail web application that showcases a merchandise's images, reviews and related items.
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card className={classes.card}>
+            <Card className={classes.card} onClick={openProject}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={SDC}
                   title="Scaling Simplified"
+                  id='SDC'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" id='SDC'>
                     Scaling Simplified
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    <strong>Technologies Used: </strong> <i>PostgreSQL, Apache Cassandra, AWS EC2, NGINX</i><br/><br />
+                  <Typography variant="body2" color="textSecondary" component="p" id='SDC'>
+                    <strong id='SDC'>Technologies Used: </strong> <i id='SDC'>PostgreSQL, Apache Cassandra, AWS EC2, NGINX</i><br /><br />
                     Backend of an online shoe retailer capable of handling 10 million records and handling 800 RPS with average latency of 200 ms.
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card className={classes.card}>
+            <Card className={classes.card} onClick={openProject}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={MVP}
                   title="Joey not Joey"
+                  id='MVP'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" id='MVP'>
                     Joey not Joey
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  <strong>Technologies Used: </strong> <i>React Native, Django, Django Channels, SQLite</i><br/><br />
+                  <Typography variant="body2" color="textSecondary" component="p" id='MVP'>
+                  <strong id='MVP'>Technologies Used: </strong> <i id='MVP'>React Native, Django, Django Channels, SQLite</i><br /><br />
                   A full stack mobile quiz game that has a single player mode and a real time online multiplayer mode via WebSockets.
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card className={classes.card}>
+            <Card className={classes.card} onClick={openProject}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={generic_store}
                   title="React-Redux Generic Store"
+                  id='RRStore'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" id='RRStore'>
                     React-Redux Online Store
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  <strong>Technologies Used: </strong> <i>React, Redux, Firebase</i><br/><br />
+                  <Typography variant="body2" color="textSecondary" component="p" id='RRStore'>
+                  <strong id='RRStore'>Technologies Used: </strong> <i id='RRStore'>React, Redux, Firebase</i><br /><br />
                   The front-end of a generic online retail web application. This application utilizes Firebase authentication, and Redux/React Hooks for state management.
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card className={classes.card}>
+            <Card className={classes.card} onClick={openProject}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={stressStrain}
                   title="Regression Analysis"
+                  id='SJSU-RA'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" id='SJSU-RA'>
                     Characterizing Ductile Materials using Regression Analysis
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  <strong>Technologies Used: </strong> <i>Octave</i><br/><br />
+                  <Typography variant="body2" color="textSecondary" component="p" id='SJSU-RA'>
+                  <strong id='SJSU-RA'>Technologies Used: </strong> <i id='SJSU-RA'>Octave</i><br /><br />
                   This is a console application that utilizes regression analysis to determine the material constants  of ductile materials.
                   </Typography>
                 </CardContent>
@@ -545,7 +556,7 @@ const  App = (props) => {
           </div>
         </div>
       </main>
-      {showModal ? <Modal close={setShowModal}/> : null}
+      {showModal ? <Modal close={setShowModal} proj={projDetails} /> : null}
     </div>
   );
 }
