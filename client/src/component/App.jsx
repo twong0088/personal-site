@@ -59,17 +59,10 @@ const scrollTo = ele => {
   //   behavior: "smooth",
   //   block: "start",
   // });
-  if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    ele.scrollIntoViewOptions({
-      behavior: "smooth",
-      block: "start",
-    })
-  } else {
-    ele.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
+  ele.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 };
 
 const useStyles = makeStyles((theme) => ({
