@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SDC from '../../../images/SDC.gif';
+import SJSURA from '../../../images/stress-strain-overall.jpg';
 import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -37,9 +38,9 @@ const Modal = ({ proj, close }) => {
       break;
     case 'SJSU-RA':
       url = '';
-      img = '';
+      img = SJSURA;
       title = 'Characterizing Ductile Materials using Regression Analysis';
-      description = `This program was developed as part of my master's project at SJSU. The objective of my project is to examine how aluminum profiles (Al 6061-T6) deformed upon impact to study how the material can be incorporated to automotive use to make vehicles more energy efficient and safe. \nIn order to create a simulation model, I needed to determine a mathematical way to depict how aluminum deforms when impacted on. Given empirical test data, I developed a program that utilized a machine learning concept known as regression analysis to reverse engineer the material constants via the gradient descent method. This program calculates the parameters that best fit the data and returns a graph depicting empirical and best fit data. This program can be used to reverse engineer the material constants of any ductile material.`
+      description = `This program was developed as part of my master's project at SJSU. The objective of my project is to examine how aluminum profiles (Al 6061-T6) deformed upon impact to study how the material can be incorporated to automotive use to make vehicles more energy efficient and safe. \nIn order to create a simulation model, I needed to determine a mathematical way to depict how aluminum deforms when impacted on. Given empirical test data, I developed a program that utilized a machine learning concept known as regression analysis to reverse engineer the material constants via the gradient descent method. \nThis program calculates the parameters that best fit the data and returns a graph depicting empirical and best fit data. This program can be used to reverse engineer the material constants of any ductile material.`
       break;
   }
 
