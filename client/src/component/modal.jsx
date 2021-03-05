@@ -22,7 +22,7 @@ const Modal = ({ proj, close }) => {
         url = '';
         img = SDC;
         title = 'Scaling Simplified';
-        description = `lol Hi Kevin!`;
+        description = `lol Hi Victor!`;
         break;
     case 'MVP':
       url = 'https://youtu.be/1RhqFDyf3DU';
