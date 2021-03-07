@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SDC from '../../../images/SDC.gif';
+import twong from '../../../images/twong-demo2.png';
 import SJSURA from '../../../images/stress-strain-overall.jpg';
 import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
@@ -30,6 +31,12 @@ const Modal = ({ proj, close }) => {
       title = 'Joey not Joey';
       description = "This is a demo of Joey not Joey, a mobile quiz game that is built with React Native, Django, and SQLite. This game was inspired by my dog Joey. I had recently found a doppelganger of my dog online and I thought this would be a fun project to do to see if people can differentiate Joey from his doppelganger. \nThis game has two game modes: a single player mode and an online multiplayer mode. \nThe single player mode allows users to play through a quiz. For each question, the player is given 20 seconds to select an answer. The player is also given 3 lifelines: 50/50, skip and reset timer, which can each be used once during the game. After using the lifeline, the button will become disabled. When the game finishes, it will take you to a game over page. It fetches a the top 10 high scores from the database. If the player scores higher than the 10th highest score, it would prompt the player to enter his/her name and add the score to the high score database. In the case where score is equal, the high score ranking would be determined by least time taken to complete quiz. \nThe multiplayer mode utilizes WebSocket (Django Channels) to maintain real time connectivity between two devices. Player one initiates a game by pressing create room which triggers the server to generate and return a unique game code. Player two joins a room by pressing join room which prompts a text input. on Submit, the client sends the submitted code to the server which checks if code is valid and if the player two slot is open. If everything is valid, it prompts you to start the game. player one cannot start game until player two joins the game. \nOnce both players join a room, they are connected via WebSocket and a turn based game is initialized. The game starts with player one. After each player completes 5 questions, it will send an updated score to the server and trigger the other player's turn. This will repeat until 4 rounds are complete and a game over page will be triggered indicating which player won.";
       break;
+    case 'twong':
+        url = '';
+        img = twong;
+        title = 'Personal Portfolio Site';
+        description = "This is my personal portfolio site. It is created using React and Material-UI. \nThis website is created with responsive UI design and can autmatically adapt to users' window space, allowing this website to have content consistency across most devices. \nTry this feature out by adjusting your browser's window size!";
+        break;
     case 'RRStore':
       url = 'https://youtu.be/nM_XZsP1aJI';
       img = '';

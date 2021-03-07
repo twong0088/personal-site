@@ -34,6 +34,7 @@ import generic_store from '../../../images/react-redux-store.png';
 import SDC from '../../../images/SDC-close-up.JPG';
 import MVP from '../../../images/MVP.png';
 import stressStrain from '../../../images/stress-strain.JPG';
+import twong from '../../../images/twong.png';
 import Modal from './modal.jsx';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
@@ -384,16 +385,10 @@ const  App = (props) => {
             <div id='about' style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
               <img src={main_img} style={{width: '80%', height: '100%', maxWidth: 500}}/>
               <p style={{ fontSize: 'medium', minWidth: 200}}>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-                facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-                gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-                donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-                Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-                imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-                arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-                donec massa sapien faucibus et molestie ac. Consequat mauris nunc congue nisi vitae suscipit.
+                Hello and welcome to my website! <br /><br />
+                My name is Terrence, I am a software Engineer experienced with JavaScript, React, React Native, Node.JS, SQL/NoSQL and more. <br /><br />
+
+                Prior to software engineering, my background was in Mechanical and Materials Engineering. I've long been passionate about engineering because it combines critical thinking and problem solving in order to create exciting innovations. I fell in love with software engineering during my Master's program after writing a machine learning algorithm to reverse engineer the material properties of aluminum profiles. By incorporating computer programming to my research, I was able to produce results that were far more accurate than what I had expected. Software engineering really excites me because it encompasses the same critical thinking and analytical skills as traditional engineering while moving at a rapid rate. As a software engineer I hope to continue innovating, and be at the forefront of driving technological advances. <br /><br />
               </p>
             </div>
           </Hidden>
@@ -401,7 +396,7 @@ const  App = (props) => {
         <Divider />
         <div  ref={projectsRef}>
           <h1>Projects</h1>
-          <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+          <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}>
             <Card className={classes.card} onClick={openProject}>
               <CardActionArea id='FEC'>
                 <CardMedia
@@ -460,9 +455,28 @@ const  App = (props) => {
               </CardActionArea>
             </Card>
             <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='RRStore'>
+              <CardActionArea id='twong'>
                 <CardMedia
                   className={classes.media}
+                  image={twong}
+                  title="Personal Portfolio Site"
+                  id='twong'
+                />
+                <CardContent id='twong'>
+                  <Typography gutterBottom variant="h5" component="h2" id='twong'>
+                    Personal Portfolio Site
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p" id='twong'>
+                  <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, MaterialUI, Heroku</i><br /><br />
+                  My personal website that you are currently viewing. It is built using the Material-UI React framework and has a responsive UI.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card className={classes.card} onClick={openProject}>
+              <CardActionArea id='RRStore'>
+                <CardMedia
+                  className={classes.media}ﬁ
                   image={generic_store}
                   title="React-Redux Generic Store"
                   id='RRStore'
