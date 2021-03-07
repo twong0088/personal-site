@@ -43,6 +43,18 @@ const useStyles = makeStyles((theme) => ({
       padding: 50,
       zIndex: 1000
     }
+  },
+  video:{
+    position: 'relative',
+    left: '50%',
+    transform: 'translateX(-50%)',
+  },
+  img: {
+    position: 'relative',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: 640,
+    height: 'auto'
   }
 }));
 
@@ -100,7 +112,7 @@ const Modal = ({ proj, close }) => {
       <div className={classes.suggestionModal} >
       <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
         <div style={{display: 'flex', flexDirection: 'row'}}>
-          {img === '' ? <ReactPlayer url={url} />: <img src={img} style={{width: 640, height: 'auto'}}/>}
+          {img === '' ? <div className={classes.video}><ReactPlayer url={url} /></div>: <img src={img} className={classes.img}/>}
         </div>
         <h2>{title}</h2>
         <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>

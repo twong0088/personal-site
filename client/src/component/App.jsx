@@ -310,7 +310,7 @@ const  App = (props) => {
   return (
     <div
       className={classes.root}
-      // onClick={clickOutModal}
+      onClick={clickOutModal}
       style={showModal ? {overflow: 'hidden'} : null}
     >
       <CssBaseline />
