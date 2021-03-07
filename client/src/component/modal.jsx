@@ -5,8 +5,52 @@ import twong from '../../../images/twong-demo2.png';
 import SJSURA from '../../../images/stress-strain-overall.jpg';
 import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    zIndex: 1000
+  },
+  suggestionModal: {
+    [theme.breakpoints.up('md')]: {
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translateY(-50%)',
+      marginLeft: -257.5,
+      backgroundColor: '#FFF',
+      height: '90vh',
+      width: 755,
+      overflowY: 'scroll',
+      padding: 50,
+      zIndex: 1000
+    },
+    [theme.breakpoints.down('sm')]: {
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: '#FFF',
+      height: '90vh',
+      width: 755,
+      overflowY: 'scroll',
+      padding: 50,
+      zIndex: 1000
+    }
+  }
+}));
 
 const Modal = ({ proj, close }) => {
+
+  const classes = useStyles();
+  const theme = useTheme();
+
   let url;
   let title;
   let description;
@@ -52,11 +96,11 @@ const Modal = ({ proj, close }) => {
   }
 
   return ReactDom.createPortal(
-    <div id='overlay'>
-      <div id='suggestionModal' >
+    <div className={classes.overlay}>
+      <div className={classes.suggestionModal} >
       <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
         <div style={{display: 'flex', flexDirection: 'row'}}>
-          {img === '' ? <ReactPlayer url={url} />: <img src={img} />}
+          {img === '' ? <ReactPlayer url={url} />: <img src={img} style={{width: 640, height: 'auto'}}/>}
         </div>
         <h2>{title}</h2>
         <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>

@@ -308,7 +308,11 @@ const  App = (props) => {
   const container = props.window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <div className={classes.root} onClick={clickOutModal} style={showModal ? {overflow: 'hidden'} : null}>
+    <div
+      className={classes.root}
+      // onClick={clickOutModal}
+      style={showModal ? {overflow: 'hidden'} : null}
+    >
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>

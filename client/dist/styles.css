@@ -8,14 +8,30 @@
   z-index: 1000;
 }
 
-#suggestionModal {
+#suggestionModalFull {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin-left: -257.5px;
+  background-color: #FFF;
+  height: 90vh;
+  width: 755px;
+  overflow-y: scroll;
+  padding: 50px;
+  z-index: 1000;
+}
+
+#suggestionModalSmall {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #FFF;
   height: 90vh;
+  width: 755px;
   overflow-y: scroll;
   padding: 50px;
   z-index: 1000;
 }
+
