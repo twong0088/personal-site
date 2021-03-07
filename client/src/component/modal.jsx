@@ -91,7 +91,7 @@ const Modal = ({ proj, close }) => {
         url = '';
         img = twong;
         title = 'Personal Portfolio Site';
-        description = "This is my personal portfolio site. It is created using React and Material-UI. \nThis website is created with responsive UI design and can autmatically adapt to users' window space, allowing this website to have content consistency across most devices. \nTry this feature out by adjusting your browser's window size!";
+        description = "This is my personal portfolio site. It is created using React and Material-UI and hosted on Heroku. \nThis website is created with responsive UI design. It is capable of autmatically adapting to users' window space, allowing this website to have content consistency across most devices. \nTry this feature out by adjusting your browser's window size!";
         break;
     case 'RRStore':
       url = 'https://youtu.be/nM_XZsP1aJI';

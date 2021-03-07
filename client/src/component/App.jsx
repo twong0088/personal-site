@@ -524,16 +524,21 @@ const  App = (props) => {
           <span><strong>Backend: </strong> Node.js, Express, Django, MySQL, PostgreSQL, SQLite, MongoDB, Cassandra, AWS (EC2, S3), NGINX</span><br />
           <span><strong>Others: </strong> C++, Python, MATLAB, Octave, Git, LaTeX</span><br />
           <h2>Work Experiences</h2>
+          <p><strong>Full Stack Developer - UL</strong><i> - 2021 - Present</i></p>
+          <ul>
+            <li>Developed MERN stack software tools for internal using agile practices</li>
+            <li>Revised legacy code and performed code maintainence to update codebase with modern technology</li>
+          </ul>
           <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
           <ul>
             <li>Designed and conducted fundamental research on advanced cementitious binders</li>
-            <li>Designed and conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements.</li>
+            <li>Designed and conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements</li>
             <li>Helped publish innovation findings in technical conferences</li>
           </ul>
           <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - 2017</i></p>
           <ul>
-            <li>Conducted testing for artificial lift pumps using metallographym cross-sectional analysis and microscopy.</li>
-            <li>Designed and executed mechanical tests on malfunctioned parts to determind mode of failure.</li>
+            <li>Conducted testing for artificial lift pumps using metallographym cross-sectional analysis and microscopy</li>
+            <li>Designed and executed mechanical tests on malfunctioned parts to determind mode of failure</li>
           </ul>
           <h2>Education</h2>
           <p><strong>Hack Reactor</strong> - Advanced Software Engineering Immersive Program</p>
