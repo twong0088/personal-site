@@ -471,7 +471,7 @@ const  App = (props) => {
                     Personal Portfolio Site
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p" id='twong'>
-                  <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, MaterialUI, Heroku</i><br /><br />
+                  <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, Material-UI, Heroku</i><br /><br />
                   My personal website that you are currently viewing. It is built using the Material-UI React framework and has a responsive UI.
                   </Typography>
                 </CardContent>
