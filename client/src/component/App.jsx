@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import {isMobileOnly, mobileVendor} from 'react-device-detect';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -316,15 +317,17 @@ const  App = (props) => {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
+          {mobileVendor === 'iPhone' ? null : (
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
           <Typography variant="h2" noWrap ref={headerRef}>
             Terrence Wong
           </Typography>
