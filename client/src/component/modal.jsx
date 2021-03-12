@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDom from 'react-dom';
 import {isMobile} from 'react-device-detect';
 import SDC from '../../../images/SDC.gif';
@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
       transform: 'translate(-50%, -50%)',
       backgroundColor: '#FFF',
       height: '90vh',
-      width: 755,
+      width: '90vw',
+      maxWidth: 755,
       overflowY: 'scroll',
       padding: 50,
       zIndex: 1000
@@ -58,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: 640,
+    width: '75vw',
+    maxWidth: 640,
     height: 'auto'
   },
   MobileSuggestionsModal: {
@@ -66,20 +68,20 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    // backgroundColor: '#FFF',
-    height: 0.9 * vh,
-    width: 0.9 * vw,
+    backgroundColor: '#FFF',
+    height: '90vh',
+    width: '90vw',
     overflowY: 'scroll',
     padding: 50,
     zIndex: 1000
   },
-  // mobileImg: {
-    // position: 'relative',
-    // left: '50%',
-    // transform: 'translateX(-50%)',
-    // width: vw * 0.75,
-    // height: 'auto'
-  // },
+  mobileImg: {
+    position: 'relative',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '75vw',
+    height: 'auto'
+  },
 }));
 
 const Modal = ({ proj, close }) => {
@@ -132,29 +134,13 @@ const Modal = ({ proj, close }) => {
       break;
   }
 
-  const imgNaturalWidth = img.naturalWidth;
-  const imgNaturalLength = img.naturalLength;
-  const ratio = (0.75 * vw) / imgNaturalWidth;
-  const imgHeight = ratio * img.height;
-
-
   if (isMobile) {
     return ReactDom.createPortal(
       <div className={classes.overlay}>
-        <div className={classes.MobileSuggestionModal} >
+        <div className={classes.MobileSuggestionsModal} >
         <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
           <div style={{display: 'flex', flexDirection: 'row'}}>
-            <img
-              src={img}
-              style={{
-                position: 'relative',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: vw * 0.75,
-                height: imgHeight
-              }}
-              // className={classes.mobileImg}
-            />
+            <img src={img} className={classes.mobileImg}/>
           </div>
           <h2>{title}</h2>
           <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
