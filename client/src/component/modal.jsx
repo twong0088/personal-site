@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import {isMobile} from 'react-device-detect';
 import SDC from '../../../images/SDC.gif';
 // import SDC from '../../../images/SDC-with-config.JPG';
 // import twong from '../../../images/twong-demo2.png';
@@ -56,7 +57,26 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateX(-50%)',
     width: 640,
     height: 'auto'
-  }
+  },
+  MobileSuggestionsModal: {
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: '#FFF',
+    height: '90vh',
+    width: '90%',
+    overflowY: 'scroll',
+    padding: 50,
+    zIndex: 1000
+  },
+  mobileImg: {
+    position: 'relative',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '75%',
+    height: 'auto'
+  },
 }));
 
 const Modal = ({ proj, close }) => {
@@ -93,7 +113,7 @@ const Modal = ({ proj, close }) => {
         url = '';
         img = twong;
         title = 'Personal Portfolio Site';
-        description = "This is my personal portfolio site. It is created using React and Material-UI and hosted on Heroku. \nThis website is created with responsive UI design. It is capable of autmatically adapting to users' window space, allowing this website to have content consistency across most devices. \nTry this feature out by adjusting your browser's window size!";
+        description = "This is my personal portfolio site. It is created using React and Material-UI and hosted on Heroku. \nThis website is created with responsive UI design. It is capable of autmatically adapting to users' window space, allowing this website to have content consistency across most devices. This website  \nTry this feature out by adjusting your browser's window size!";
         break;
     case 'RRStore':
       url = 'https://youtu.be/nM_XZsP1aJI';
@@ -109,19 +129,35 @@ const Modal = ({ proj, close }) => {
       break;
   }
 
-  return ReactDom.createPortal(
-    <div className={classes.overlay}>
-      <div className={classes.suggestionModal} >
-      <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
-        <div style={{display: 'flex', flexDirection: 'row'}}>
-          {img === '' ? <div className={classes.video}><ReactPlayer url={url} /></div>: <img src={img} className={classes.img}/>}
+  if (isMobile) {
+    return ReactDom.createPortal(
+      <div className={classes.overlay}>
+        <div className={classes.MobileSuggestionModal} >
+        <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+            <img src={img} className={classes.mobileImg}/>
+          </div>
+          <h2>{title}</h2>
+          <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
         </div>
-        <h2>{title}</h2>
-        <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
-      </div>
-    </div>,
-    document.getElementById('modal')
-  );
+      </div>,
+      document.getElementById('modal')
+    );
+  } else {
+    return ReactDom.createPortal(
+      <div className={classes.overlay}>
+        <div className={classes.suggestionModal} >
+        <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+            {url ? <div className={classes.video}><ReactPlayer url={url} /></div>: <img src={img} className={classes.img}/>}
+          </div>
+          <h2>{title}</h2>
+          <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
+        </div>
+      </div>,
+      document.getElementById('modal')
+    );
+  }
 };
 
 export default Modal;
