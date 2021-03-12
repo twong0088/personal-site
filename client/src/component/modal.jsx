@@ -9,6 +9,9 @@ import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
+const vh = window.innerHeight;
+const vw = window.innerWidth;
+
 const useStyles = makeStyles((theme) => ({
   overlay: {
     position: 'fixed',
@@ -64,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',
-    height: '90vh',
-    width: '90vw',
+    height: 0.9 * vh,
+    width: 0.9 * vw,
     overflowY: 'scroll',
     padding: 50,
     zIndex: 1000
@@ -74,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '75vw',
+    width: vw * 0.75,
     height: 'auto'
   },
 }));
