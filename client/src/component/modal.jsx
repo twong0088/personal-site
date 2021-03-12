@@ -69,10 +69,10 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',
-    height: 0.9 * vh,
-    width: 0.9 * vw,
+    height: '90vh',
+    // width: 0.9 * vw,
     overflowY: 'scroll',
-    padding: 50,
+    // padding: 50,
     zIndex: 1000
   },
   mobileImg: {
