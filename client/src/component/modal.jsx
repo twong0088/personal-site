@@ -64,23 +64,35 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto'
   },
   MobileSuggestionsModal: {
+    // position: 'fixed',
+    // top: '50%',
+    // left: '50%',
+    // transform: 'translate(-50%, -50%)',
+    // backgroundColor: '#FFF',
+    // height: '90vh',
+    // width: 0.9 * vw,
+    // overflowY: 'scroll',
+    // padding: 50,
+    // zIndex: 1000
+
     position: 'fixed',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',
     height: '90vh',
-    // width: 0.9 * vw,
+    width: 320,
     overflowY: 'scroll',
-    // padding: 50,
+    padding: 50,
     zIndex: 1000
   },
   mobileImg: {
     position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: 0.75 * vw,
+    width: 300,
     height: 'auto'
+    // height: 300 * () / 640
   },
 }));
 
