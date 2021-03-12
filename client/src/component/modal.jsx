@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translateX(-50%)',
     width: 300,
-    height: 'auto'
+    // height: 'auto'
     // height: 300 * () / 640
   },
 }));
