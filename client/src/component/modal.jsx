@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',
-    height: '80vh',
-    width: 320,
+    height: '85vh',
+    width: '90vw',
     overflowY: 'scroll',
     padding: 50,
     zIndex: 1000
@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: 300,
+    width: '80vw',
     height: '100%'
     // height: 300 * () / 640
   },
