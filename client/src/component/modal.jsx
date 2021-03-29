@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',
-    height: '90vh',
+    height: '80vh',
     width: 320,
     overflowY: 'scroll',
     padding: 50,
