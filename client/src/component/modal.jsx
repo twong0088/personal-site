@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import {isMobileOnly, isTablet} from 'react-device-detect';
-import SDC from '../../../images/SDC.gif';
-// import SDC from '../../../images/SDC-with-config.JPG';
+// import SDC from '../../../images/SDC.gif';
+import SDC from '../../../images/SDC-with-config.JPG';
 import twong from '../../../images/twong-demo2.png';
 import SJSURA from '../../../images/stress-strain-overall.jpg';
 import FEC from '../../../images/FEC.png';
@@ -68,17 +68,6 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto'
   },
   MobileSuggestionsModal: {
-    // position: 'fixed',
-    // top: '50%',
-    // left: '50%',
-    // transform: 'translate(-50%, -50%)',
-    // backgroundColor: '#FFF',
-    // height: '90vh',
-    // width: 0.9 * vw,
-    // overflowY: 'scroll',
-    // padding: 50,
-    // zIndex: 1000
-
     position: 'fixed',
     top: '50%',
     left: '50%',
@@ -96,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translateX(-50%)',
     width: '80vw',
     height: '100%'
-    // height: 300 * () / 640
   },
 }));
 
@@ -121,8 +109,7 @@ const Modal = ({ proj, close }) => {
         url = '';
         img = SDC;
         title = 'Scaling Simplified';
-        description = 'lol'
-        // description = `For this project, I redesigned the backend of an online shoe retailer. The component I inherted is an image carousel that displays 16 recommendations per product. My challenge is to scale the micro-service to handle 10 M records while ensuring great user experience. \nUsing New Relic and stress testing with K6, I identified that this application's bottleneck was the database's long query time. \nTo redesign the database, I developed a PostgreSQL schema with two tables; a products table containing the product details, and a suggestions table with two foreign key references referncing the id from the products table. By implenenting indexing, I achieved an average query time of 30 ms. \nTo further improve the efficiency of this application, I explored the viability of using arrays in my PostgreSQL schema. The new schema is similar to the first but instead of having a suggestions column referencing the product ID, there would be an array of suggestion IDs. My rationale is that my original schema design with indexing would have a logarithmic lookup whereas this new design would have a constant lookup given that I would use a primary key to search for the suggestions array which contains the primary key of the recommended. Implementing this new design improved the micro-service’s average query time by 87% from 30 ms to 4 ms, and its database storage size by 68%, from 8.8 GB to 2.8 GB. \nAfter optimizing the database, my bottleneck became the server. At high traffic, the server would be unable to keep up with the requests, which would result in high latency and error. To address this issue, I horizontally scaled the microservice to 5 AWS instances and implemented NGINX load balancing with a least connection configuration. Ultimately, I was able to reduce latency from 3000 ms to 150 ms at 5000 users per minute.`;
+        description = `For this project, I redesigned the backend of an online shoe retailer. The component I inherted is an image carousel that displays 16 recommendations per product. My challenge is to scale the micro-service to handle 10 M records while ensuring great user experience. \nUsing New Relic and stress testing with K6, I identified that this application's bottleneck was the database's long query time. \nTo redesign the database, I developed a PostgreSQL schema with two tables; a products table containing the product details, and a suggestions table with two foreign key references referncing the id from the products table. By implenenting indexing, I achieved an average query time of 30 ms. \nTo further improve the efficiency of this application, I explored the viability of using arrays in my PostgreSQL schema. The new schema is similar to the first but instead of having a suggestions column referencing the product ID, there would be an array of suggestion IDs. My rationale is that my original schema design with indexing would have a logarithmic lookup whereas this new design would have a constant lookup given that I would use a primary key to search for the suggestions array which contains the primary key of the recommended. Implementing this new design improved the micro-service’s average query time by 87% from 30 ms to 4 ms, and its database storage size by 68%, from 8.8 GB to 2.8 GB. \nAfter optimizing the database, my bottleneck became the server. At high traffic, the server would be unable to keep up with the requests, which would result in high latency and error. To address this issue, I horizontally scaled the microservice to 5 AWS instances and implemented NGINX load balancing with a least connection configuration. Ultimately, I was able to reduce latency from 3000 ms to 150 ms at 5000 users per minute.`;
         break;
     case 'MVP':
       url = 'https://youtu.be/1RhqFDyf3DU';
@@ -149,10 +136,6 @@ const Modal = ({ proj, close }) => {
       description = `This program was developed as part of my master's project at SJSU. The objective of my project is to examine how aluminum profiles (Al 6061-T6) deformed upon impact to study how the material can be incorporated to automotive use to make vehicles more energy efficient and safe. \nIn order to create a simulation model, I needed to determine a mathematical way to depict how aluminum deforms when impacted on. Given empirical test data, I developed a program that utilized a machine learning concept known as regression analysis to reverse engineer the material constants via the gradient descent method. \nThis program calculates the parameters that best fit the data and returns a graph depicting empirical and best fit data. This program can be used to reverse engineer the material constants of any ductile material.`
       break;
   }
-
-  // useEffect(() => {
-  //   console.log(vw, vh);
-  // }, [])
 
   if (isMobileOnly) {
     return ReactDom.createPortal(
