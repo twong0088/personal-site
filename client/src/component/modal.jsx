@@ -150,7 +150,7 @@ const Modal = ({ proj, close }) => {
   //   console.log(vw, vh);
   // }, [])
 
-  if (isMobile) {
+  if (isMobileOnly) {
     return ReactDom.createPortal(
       <div className={classes.overlay}>
         <div className={classes.MobileSuggestionsModal} >
