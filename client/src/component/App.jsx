@@ -27,6 +27,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 // const profile = require('../../../profile.png');
 import profile from '../../../images/profile.png';
 import main_img from '../../../images/main.jpg';
@@ -136,8 +137,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   card: {
-    minWidth: 300,
-    maxWidth: 350,
+    // minWidth: 300,
+    // maxWidth: 350,
+    width: 350,
     margin: 20
   },
   media: {
@@ -399,124 +401,143 @@ const  App = (props) => {
           </Hidden>
         </div>
         <Divider />
-        <div  ref={projectsRef}>
+        <div ref={projectsRef} >
           <h1>Projects</h1>
-          <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='FEC'>
-                <CardMedia
-                  className={classes.media}
-                  image={FEC}
-                  title="Recreational Engineers Inc."
-                  id='FEC'
-                />
-                <CardContent id='FEC'>
-                  <Typography gutterBottom variant="h5" component="h2" id='FEC'>
-                    Recreational Engineers Inc.
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='FEC'>
-                    <strong id='FEC'>Technologies Used: </strong> <i id='FEC'>React, MySQL, Express, Node.JS, AWS S3/EC2</i><br /><br />
-                    A full stack retail web application that showcases a merchandise's images, reviews and related items.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='SDC'>
-                <CardMedia
-                  className={classes.media}
-                  image={SDC}
-                  title="Scaling Simplified"
-                  id='SDC'
-                />
-                <CardContent id='SDC'>
-                  <Typography gutterBottom variant="h5" component="h2" id='SDC'>
-                    Scaling Simplified
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='SDC'>
-                    <strong id='SDC'>Technologies Used: </strong> <i id='SDC'>PostgreSQL, Apache Cassandra, AWS EC2, NGINX</i><br /><br />
-                    Backend of an online shoe retailer capable of handling 10 million records and handling 800 RPS with average latency of 200 ms.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='MVP'>
-                <CardMedia
-                  className={classes.media}
-                  image={MVP}
-                  title="Joey not Joey"
-                  id='MVP'
-                />
-                <CardContent id='MVP'>
-                  <Typography gutterBottom variant="h5" component="h2" id='MVP'>
-                    Joey not Joey
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='MVP'>
-                  <strong id='MVP'>Technologies Used: </strong> <i id='MVP'>React Native, Django, Django Channels, SQLite</i><br /><br />
-                  A full stack mobile quiz game that has a single player mode and a real time online multiplayer mode via WebSockets.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='twong'>
-                <CardMedia
-                  className={classes.media}
-                  image={twong}
-                  title="Personal Portfolio Site"
-                  id='twong'
-                />
-                <CardContent id='twong'>
-                  <Typography gutterBottom variant="h5" component="h2" id='twong'>
-                    Personal Portfolio Site
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='twong'>
-                  <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, Material-UI, Heroku</i><br /><br />
-                  My personal website that you are currently viewing. It is built using the Material-UI React framework and has a responsive UI.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='RRStore'>
-                <CardMedia
-                  className={classes.media}ﬁ
-                  image={generic_store}
-                  title="React-Redux Generic Store"
-                  id='RRStore'
-                />
-                <CardContent id='RRStore'>
-                  <Typography gutterBottom variant="h5" component="h2" id='RRStore'>
-                    React-Redux Online Store
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='RRStore'>
-                  <strong id='RRStore'>Technologies Used: </strong> <i id='RRStore'>React, Redux, Firebase</i><br /><br />
-                  The front-end of a generic online retail web application. This application utilizes Firebase authentication, and Redux/React Hooks for state management.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className={classes.card} onClick={openProject}>
-              <CardActionArea id='SJSU-RA'>
-                <CardMedia
-                  className={classes.media}
-                  image={stressStrain}
-                  title="Regression Analysis"
-                  id='SJSU-RA'
-                />
-                <CardContent id='SJSU-RA'>
-                  <Typography gutterBottom variant="h5" component="h2" id='SJSU-RA'>
-                    Characterizing Ductile Materials using Regression Analysis
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p" id='SJSU-RA'>
-                  <strong id='SJSU-RA'>Technologies Used: </strong> <i id='SJSU-RA'>Octave</i><br /><br />
-                  This is a console application that utilizes regression analysis to determine the material constants  of ductile materials.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </div>
+          {/* <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}> */}
+          <Grid container xs={12}>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='FEC'>
+                  <CardMedia
+                    className={classes.media}
+                    image={FEC}
+                    title="Recreational Engineers Inc."
+                    id='FEC'
+                  />
+                  <CardContent id='FEC'>
+                    <Typography gutterBottom variant="h5" component="h2" id='FEC'>
+                      Recreational Engineers Inc.
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='FEC'>
+                      <strong id='FEC'>Technologies Used: </strong> <i id='FEC'>React, MySQL, Express, Node.JS, AWS S3/EC2</i><br /><br />
+                      A full stack retail web application that showcases a merchandise's images, reviews and related items.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='SDC'>
+                  <CardMedia
+                    className={classes.media}
+                    image={SDC}
+                    title="Scaling Simplified"
+                    id='SDC'
+                  />
+                  <CardContent id='SDC'>
+                    <Typography gutterBottom variant="h5" component="h2" id='SDC'>
+                      Scaling Simplified
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='SDC'>
+                      <strong id='SDC'>Technologies Used: </strong> <i id='SDC'>PostgreSQL, Apache Cassandra, AWS EC2, NGINX</i><br /><br />
+                      Backend of an online shoe retailer capable of handling 10 million records and handling 800 RPS with average latency of 200 ms.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='MVP'>
+                  <CardMedia
+                    className={classes.media}
+                    image={MVP}
+                    title="Joey not Joey"
+                    id='MVP'
+                  />
+                  <CardContent id='MVP'>
+                    <Typography gutterBottom variant="h5" component="h2" id='MVP'>
+                      Joey not Joey
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='MVP'>
+                    <strong id='MVP'>Technologies Used: </strong> <i id='MVP'>React Native, Django, Django Channels, SQLite</i><br /><br />
+                    A full stack mobile quiz game that has a single player mode and a real time online multiplayer mode via WebSockets.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='twong'>
+                  <CardMedia
+                    className={classes.media}
+                    image={twong}
+                    title="Personal Portfolio Site"
+                    id='twong'
+                  />
+                  <CardContent id='twong'>
+                    <Typography gutterBottom variant="h5" component="h2" id='twong'>
+                      Personal Portfolio Site
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='twong'>
+                    <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, Material-UI, Heroku</i><br /><br />
+                    My personal website that you are currently viewing. It is built using the Material-UI React framework and has a responsive UI.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='RRStore'>
+                  <CardMedia
+                    className={classes.media}ﬁ
+                    image={generic_store}
+                    title="React-Redux Generic Store"
+                    id='RRStore'
+                  />
+                  <CardContent id='RRStore'>
+                    <Typography gutterBottom variant="h5" component="h2" id='RRStore'>
+                      React-Redux Online Store
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='RRStore'>
+                    <strong id='RRStore'>Technologies Used: </strong> <i id='RRStore'>React, Redux, Firebase</i><br /><br />
+                    The front-end of a generic online retail web application. This application utilizes Firebase authentication, and Redux/React Hooks for state management.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12} sm={6}> */}
+            <Grid item xs>
+              <Card className={classes.card} onClick={openProject}>
+                <CardActionArea id='SJSU-RA'>
+                  <CardMedia
+                    className={classes.media}
+                    image={stressStrain}
+                    title="Regression Analysis"
+                    id='SJSU-RA'
+                  />
+                  <CardContent id='SJSU-RA'>
+                    <Typography gutterBottom variant="h5" component="h2" id='SJSU-RA'>
+                      Characterizing Ductile Materials using Regression Analysis
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" id='SJSU-RA'>
+                    <strong id='SJSU-RA'>Technologies Used: </strong> <i id='SJSU-RA'>Octave</i><br /><br />
+                    This is a console application that utilizes regression analysis to determine the material constants  of ductile materials.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          </Grid>
         </div>
         <Divider />
         <div ref={resumeRef}>
