@@ -407,7 +407,7 @@ const  App = (props) => {
           <h1>Projects</h1>
           {/* <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}> */}
           <Grid container xs={12}>
-          <Grid item sm={12}  md={6} lg={4} xl={3}>
+          <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='FEC'>
@@ -429,7 +429,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item sm={12} md={6} lg={4} xl={3}>
+            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SDC'>
@@ -451,7 +451,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='MVP'>
@@ -473,7 +473,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='twong'>
@@ -495,7 +495,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='RRStore'>
@@ -517,7 +517,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
             {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SJSU-RA'>
