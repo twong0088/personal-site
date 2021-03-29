@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import ReactDom from 'react-dom';
-import {isMobile} from 'react-device-detect';
+import {isMobileOnly, isTablet} from 'react-device-detect';
 import SDC from '../../../images/SDC.gif';
 // import SDC from '../../../images/SDC-with-config.JPG';
 import twong from '../../../images/twong-demo2.png';
@@ -157,6 +157,20 @@ const Modal = ({ proj, close }) => {
         <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
           <div style={{display: 'flex', flexDirection: 'row'}}>
             <img src={img} className={classes.mobileImg}/>
+          </div>
+          <h2>{title}</h2>
+          <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
+        </div>
+      </div>,
+      document.getElementById('modal')
+    );
+  } else if (isTablet) {
+    return ReactDom.createPortal(
+      <div className={classes.overlay}>
+        <div className={classes.suggestionModal} >
+        <CloseIcon onClick={() => {close()}} style={{cursor: 'pointer'}}/>
+          <div style={{display: 'flex', flexDirection: 'row'}}>
+            <img src={img} className={classes.img}/>
           </div>
           <h2>{title}</h2>
           <p><strong>Project Details: </strong>{description.split('\n').map(str => (<p>{str}</p>))}</p>
