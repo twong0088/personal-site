@@ -28,6 +28,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 // const profile = require('../../../profile.png');
 import profile from '../../../images/profile.png';
 import main_img from '../../../images/main.jpg';
@@ -139,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     // minWidth: 300,
     // maxWidth: 350,
-    width: 350,
+    // width: 350,
     margin: 20
   },
   media: {
@@ -405,8 +407,8 @@ const  App = (props) => {
           <h1>Projects</h1>
           {/* <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}> */}
           <Grid container xs={12}>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+          <Grid item sm={12}  md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='FEC'>
                   <CardMedia
@@ -427,8 +429,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+            <Grid item sm={12} md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SDC'>
                   <CardMedia
@@ -449,8 +451,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='MVP'>
                   <CardMedia
@@ -471,8 +473,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='twong'>
                   <CardMedia
@@ -493,8 +495,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='RRStore'>
                   <CardMedia
@@ -515,8 +517,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            {/* <Grid item xs={12} sm={6}> */}
-            <Grid item xs>
+            <Grid item sm={12}  md={6} lg={4} xl={3}>
+            {/* <Grid item xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SJSU-RA'>
                   <CardMedia
