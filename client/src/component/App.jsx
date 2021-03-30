@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     background: '#022145',
+    overflow: 'hidden',
     color: '#F3F1F0',
     [theme.breakpoints.up('md')]: {
       display: 'none',
@@ -125,7 +126,8 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    background: '#022145'
+    background: '#022145',
+    overflow: 'hidden'
   },
   content: {
     flexGrow: 1,
@@ -230,7 +232,10 @@ const  App = (props) => {
       <div className={classes.profileContainer}>
         <img src={profile}  className={classes.profile}/>
       </div>
-      <div className={classes.toolbar} />
+      <div
+        style={{height: '40px'}}
+        // className={classes.toolbar}
+      />
       <List>
         <Divider className={classes.divider}/>
         <ListItem
