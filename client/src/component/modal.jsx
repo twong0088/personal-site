@@ -4,7 +4,7 @@ import {isMobileOnly, isTablet} from 'react-device-detect';
 // import SDC from '../../../images/SDC.gif';
 import SDC from '../../../images/SDC-with-config.JPG';
 import twong from '../../../images/twong-demo2.png';
-import SJSURA from '../../../images/stress-strain-overall.jpg';
+import SJSURA from '../../../images/stress-strain-overall.JPG';
 import FEC from '../../../images/FEC.png';
 import generic_store from '../../../images/react-redux-store.png';
 import MVP from '../../../images/MVP.png';
