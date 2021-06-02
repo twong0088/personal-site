@@ -30,7 +30,6 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-// const profile = require('../../../profile.png');
 import profile from '../../../images/profile.png';
 import main_img from '../../../images/main.jpg';
 import FEC from '../../../images/FEC.png';
@@ -341,7 +340,6 @@ const  App = (props) => {
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden mdUp implementation="css">
           <Drawer
             container={container}
@@ -410,10 +408,8 @@ const  App = (props) => {
         <Divider />
         <div ref={projectsRef} >
           <h1>Projects</h1>
-          {/* <div style={{display:'flex', justifyContent: 'space-around', flexDirection:'row', flexWrap:'wrap'}}> */}
-          <Grid container xs={12}>
-          <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+          <Grid container>
+          <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='FEC'>
                   <CardMedia
@@ -434,8 +430,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+            <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SDC'>
                   <CardMedia
@@ -456,8 +451,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+            <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='MVP'>
                   <CardMedia
@@ -478,8 +472,8 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+            <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
+            {/* <Grid item={true} xs> */}
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='twong'>
                   <CardMedia
@@ -500,8 +494,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+            <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='RRStore'>
                   <CardMedia
@@ -522,8 +515,7 @@ const  App = (props) => {
                 </CardActionArea>
               </Card>
             </Grid>
-            <Grid item xs={12} sm ={6} md={6} lg={4} xl={3}>
-            {/* <Grid item xs> */}
+            <Grid item={true} xs={12} sm ={6} md={6} lg={4} xl={3}>
               <Card className={classes.card} onClick={openProject}>
                 <CardActionArea id='SJSU-RA'>
                   <CardMedia
