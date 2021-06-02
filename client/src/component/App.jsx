@@ -549,7 +549,7 @@ const  App = (props) => {
           <ul>
             <li>Developed MERN stack software tools using agile practices</li>
             <li>Improved code maintainability by creating unit and end to end tests with Jest, Enzyme and React Testing Library</li>
-            <li>Revised legacy code and performed code maintainence to update codebase with modern technology</li>
+            <li>Revised legacy code and performed code maintenance to update codebase with modern technology</li>
           </ul>
           <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
           <ul>
