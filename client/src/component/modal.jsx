@@ -8,7 +8,7 @@ import SJSURA from '../../../images/stress-strain-overall.JPG';
 import FEC from '../../../images/FEC.png';
 import generic_store from '../../../images/react-redux-store.png';
 import MVP from '../../../images/MVP.png';
-import stressStrain from '../../../images/stress-strain.jpg';
+import stressStrain from '../../../images/stress-strain.JPG';
 import ReactPlayer from 'react-player/lazy';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, useTheme } from '@material-ui/core/styles';

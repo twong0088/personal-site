@@ -37,7 +37,7 @@ import FEC from '../../../images/FEC.png';
 import generic_store from '../../../images/react-redux-store.png';
 import SDC from '../../../images/SDC-close-up.JPG';
 import MVP from '../../../images/MVP.png';
-import stressStrain from '../../../images/stress-strain.jpg';
+import stressStrain from '../../../images/stress-strain.JPG';
 import twong from '../../../images/twong.png';
 import Modal from './modal.jsx';
 import smoothscroll from 'smoothscroll-polyfill';
