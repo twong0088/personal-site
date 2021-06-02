@@ -548,13 +548,13 @@ const  App = (props) => {
           <p><strong>Full Stack Developer - UL</strong><i> - 2021 - Present</i></p>
           <ul>
             <li>Developed MERN stack software tools using agile practices</li>
-            <li>Improved code maintaiinability by creating unit and end to end tests with Jest, Enzyme and React Testing Library</li>
+            <li>Improved code maintainability by creating unit and end to end tests with Jest, Enzyme and React Testing Library</li>
             <li>Revised legacy code and performed code maintainence to update codebase with modern technology</li>
           </ul>
           <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
           <ul>
-            <li>Designed and conducted fundamental research on advanced cementitious binders</li>
-            <li>Designed and conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements</li>
+            <li>Designed fundamental research on advanced cementitious binders</li>
+            <li>Conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements</li>
             <li>Helped publish innovation findings in technical conferences</li>
           </ul>
           <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - 2017</i></p>
