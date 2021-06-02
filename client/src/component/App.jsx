@@ -487,7 +487,7 @@ const  App = (props) => {
                       Personal Portfolio Site
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" id='twong'>
-                    <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, Material-UI, Heroku</i><br /><br />
+                    <strong id='twong'>Technologies Used: </strong> <i id='twong'>React, Material-UI, Netlify</i><br /><br />
                     My personal website that you are currently viewing. It is built using the Material-UI React framework and has a responsive UI.
                     </Typography>
                   </CardContent>
@@ -547,7 +547,8 @@ const  App = (props) => {
           <h2>Work Experiences</h2>
           <p><strong>Full Stack Developer - UL</strong><i> - 2021 - Present</i></p>
           <ul>
-            <li>Developed MERN stack software tools for internal using agile practices</li>
+            <li>Developed MERN stack software tools using agile practices</li>
+            <li>Improved code maintaiinability by creating unit and end to end tests with Jest, Enzyme and React Testing Library</li>
             <li>Revised legacy code and performed code maintainence to update codebase with modern technology</li>
           </ul>
           <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
@@ -558,7 +559,7 @@ const  App = (props) => {
           </ul>
           <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - 2017</i></p>
           <ul>
-            <li>Conducted testing for artificial lift pumps using metallographym cross-sectional analysis and microscopy</li>
+            <li>Conducted testing for artificial lift pumps using metallography, cross-sectional analysis and microscopy</li>
             <li>Designed and executed mechanical tests on malfunctioned parts to determind mode of failure</li>
           </ul>
           <h2>Education</h2>
