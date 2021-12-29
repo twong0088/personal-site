@@ -545,19 +545,24 @@ const  App = (props) => {
           <span><strong>Backend: </strong> Node.js, Express, Django, MySQL, PostgreSQL, SQLite, MongoDB, Cassandra, AWS (EC2, S3), NGINX</span><br />
           <span><strong>Others: </strong> C++, Python, MATLAB, Octave, Git, LaTeX</span><br />
           <h2>Work Experiences</h2>
-          <p><strong>Full Stack Developer - UL</strong><i> - 2021 - Present</i></p>
+          <p><strong>Full Stack Engineer - Autodesk</strong><i> - Sept 2021 - Present</i></p>
           <ul>
-            <li>Developed MERN stack software tools using agile practices</li>
-            <li>Improved code maintainability by creating unit and end to end tests with Jest, Enzyme and React Testing Library</li>
-            <li>Revised legacy code and performed code maintenance to update codebase with modern technology</li>
+            <li>Developed Full-stack applications for Autodesk Construction Cloud using Typescript/React for the frontend and Flask for the backend</li>
+            <li>Collaborated in the backend system architecture design of new features and spearheaded research efforts on numerous backend projects</li>
           </ul>
-          <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - 2018 - 2019</i></p>
+          <p><strong>Full Stack Developer - UL</strong><i> - Mar 2021 - Sept 2021</i></p>
+          <ul>
+            <li>Developed features on numerous MERN stack software tools used by UL employees globally</li>
+            <li>Recreated one tool’s form component, improving code reusability by 60% and reducing the time it takes for future developers to create new forms by 50%</li>
+            <li>Developed unit tests with Jest, Enzyme and React Testing Library, improving code base’s test coverage to 85%</li>
+          </ul>
+          <p><strong>Research Engineer - CTS Cement Manufacturing Corp.</strong><i> - Sept 2018 - Aug 2019</i></p>
           <ul>
             <li>Designed fundamental research on advanced cementitious binders</li>
             <li>Conducted research projects on advancing pavement and infrastructure design by optimizing the physical and chemical properties of advanced cements</li>
             <li>Helped publish innovation findings in technical conferences</li>
           </ul>
-          <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - 2017</i></p>
+          <p><strong>Research and Development Intern - Baker Hughes Inc.</strong><i> - Jun 2017 - Sept 2017</i></p>
           <ul>
             <li>Conducted testing for artificial lift pumps using metallography, cross-sectional analysis and microscopy</li>
             <li>Designed and executed mechanical tests on malfunctioned parts to determind mode of failure</li>
@@ -594,7 +599,7 @@ const  App = (props) => {
               <span style={{paddingLeft: 15}}>https://github.com/twong0088</span>
             </div>
             <h3>Resume</h3>
-            <div onClick={()=>{window.open('https://drive.google.com/file/d/1chbif55hHzMeb7ggnhO0F-9j_4oRXa6k/view?usp=sharing', '_blank')}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
+            <div onClick={()=>{window.open('https://drive.google.com/file/d/1mpeOTOSmV4OD5kavPDuUZ2NY8wD9JdzM/view?usp=sharing', '_blank')}} style={{display: 'flex', flexDirection: 'row', alignItems:'center', cursor: 'pointer'}}>
               <AccountBoxIcon />
               <span style={{paddingLeft: 15}}>My Resume</span>
             </div>
