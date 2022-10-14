@@ -542,12 +542,13 @@ const  App = (props) => {
         <div ref={resumeRef}>
           <h1>Resume</h1>
           <span><strong>Frontend: </strong> JavaScript (ES6), React, Redux, React Native, Mocha/Chai, Jest, HTML, CSS, JQuery, Babel, Webpack</span><br />
-          <span><strong>Backend: </strong> Node.js, Express, Django, MySQL, PostgreSQL, SQLite, MongoDB, Cassandra, AWS (EC2, S3), NGINX</span><br />
+          <span><strong>Backend: </strong> Node.js, Express, Flask, MySQL, PostgreSQL, SQLite, MongoDB, Cassandra, AWS (EC2, S3), NGINX</span><br />
           <span><strong>Others: </strong> C++, Python, MATLAB, Octave, Git, LaTeX</span><br />
           <h2>Work Experiences</h2>
-          <p><strong>Full Stack Engineer - Autodesk</strong><i> - Sept 2021 - Present</i></p>
+          <p><strong>Software Engineer - Google</strong><i> - Aug 2022 - Present</i></p>
+          <p><strong>Full Stack Engineer - Autodesk</strong><i> - Sept 2021 - Aug 2022</i></p>
           <ul>
-            <li>Developed Full-stack applications for Autodesk Construction Cloud using Typescript/React for the frontend and Flask for the backend</li>
+            <li>Developed Full-stack applications for Autodesk Construction Cloud using Typescript/React for the frontend and Python Flask for the backend</li>
             <li>Collaborated in the backend system architecture design of new features and spearheaded research efforts on numerous backend projects</li>
           </ul>
           <p><strong>Full Stack Developer - UL</strong><i> - Mar 2021 - Sept 2021</i></p>
