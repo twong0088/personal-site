@@ -131,11 +131,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* margin-right: -12px; */
+    color: #6f6f6f;
 }
 
 .floating-element {
-    /* position: relative; */
     margin-top: -112px;
     padding: 0px 24px;
     display: flex;
