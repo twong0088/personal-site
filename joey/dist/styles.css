@@ -1,0 +1,144 @@
+body {
+    margin: 0px 0px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #00000014;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    padding-top: 24px;
+    width: 1128px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content, .side-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    width: 782px;
+}
+
+.side-content {
+    width: 322px;
+}
+
+.profile {
+    border-radius: 0.8rem;
+    border: 1px solid #00000014;
+}
+
+.profile-background-img {
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+
+.profile-text {
+    padding: 22px 24px 24px 24px;
+}
+
+.info-row-one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: x-large;
+    font-weight: 600;
+    line-height: 1.25;
+}
+.pronouns {
+    padding-left: 8px;
+}
+
+.contact, .connections {
+    color: #0a66c2;
+    cursor: pointer;
+}
+
+.connections {
+    margin-top: 8px;
+}
+
+.highlight {
+    width: 232px;
+    display: flex;
+    align-items: center;
+}
+
+.highlight-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.profile-pic-container {
+
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+}
+
+.profile-pic {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+
+.buttons {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+}
+.message-button {
+    background-color: #0a66c2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 32px;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.more-button {
+    background-color: white;
+    margin-left: 8px;
+    color: #666666;
+    border:1px solid #666666;
+    border-radius: 25px;
+    height: 32px;
+    padding: 0px 16px;
+}
+
+.notification {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: -12px; */
+}
+
+.floating-element {
+    /* position: relative; */
+    margin-top: -112px;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
