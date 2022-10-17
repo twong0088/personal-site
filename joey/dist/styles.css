@@ -2,6 +2,7 @@ body {
     margin: 0px 0px;
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
     color: #000000e6;
+    font-size: 14px;
 }
 
 .header {
@@ -13,6 +14,9 @@ body {
 .app {
     display: flex;
     justify-content: center;
+    background-color: #f3f2ef;
+    height: calc(100vh - 47px);
+    overflow-y: scroll;
 }
 
 .body {
@@ -35,9 +39,10 @@ body {
     width: 322px;
 }
 
-.profile {
+.profile, .about, .connection-suggestion {
     border-radius: 0.8rem;
     border: 1px solid #00000014;
+    background-color: #ffffff;
 }
 
 .profile-background-img {
@@ -63,25 +68,22 @@ body {
 }
 .pronouns {
     padding-left: 8px;
-    font-size: 14px;
 }
 
 .contact, .connections {
     color: #0a66c2;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .connections {
     margin-top: 8px;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .highlight {
     width: 232px;
     display: flex;
     align-items: center;
-    font-size: 14px;
     font-weight: 600;
 }
 
@@ -153,9 +155,30 @@ body {
 
 .contact-row {
     margin: 8px 0px;
-    font-size: 14px;
 }
 
 .region {
     color: #868686;
+}
+
+.connection-suggestion {
+    padding: 16px 16px 12px 16px;
+}
+
+.connection-suggestion-title {
+    font-weight: 600;
+}
+
+.about {
+    margin-top: 8px;
+    padding: 24px
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about-details {
+    padding: 12px 0px;
 }
