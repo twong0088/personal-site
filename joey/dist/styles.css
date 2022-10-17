@@ -1,6 +1,9 @@
 body {
     margin: 0px 0px;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    color: #000000e6;
 }
+
 .header {
     display: flex;
     justify-content: center;
@@ -54,12 +57,13 @@ body {
 }
 
 .name {
-    font-size: x-large;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25;
 }
 .pronouns {
     padding-left: 8px;
+    font-size: 14px;
 }
 
 .contact, .connections {
@@ -69,12 +73,16 @@ body {
 
 .connections {
     margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .highlight {
     width: 232px;
     display: flex;
     align-items: center;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .highlight-logo {
@@ -140,4 +148,14 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+}
+
+
+.contact-row {
+    margin: 8px 0px;
+    font-size: 14px;
+}
+
+.region {
+    color: #868686;
 }
